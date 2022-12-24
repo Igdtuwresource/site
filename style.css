@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root{
-    --main-color:#d3ad7f;
+    --main-color:#daaa6e;
     --black:black;
     --bg:#989798;
     --border:.1rem solid rgba(137, 28, 28, 0.3);
@@ -19,6 +19,7 @@
 .ex{
     height: 40px;
     width:40px;
+    margin-right:20px;
 }
 
 
@@ -73,7 +74,21 @@ section{
     cursor: pointer;
     border-radius: 5px;
 }
-
+.btns{
+    margin-top: 1rem;
+    display:inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:rgb(45, 43, 43);
+    background: var(--main-color);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left:30px;
+}
+.btns:hover{
+    letter-spacing: .2rem;
+    color:black;
+}
 .btn:hover{
     letter-spacing: .2rem;
 }
@@ -117,10 +132,6 @@ section{
     color:var(--main-color);
 }
 
-#menu-btn{
-    display: none;
-}
-
 .header .cart-items-container .cart-item .fa-times{
     position: absolute;
     top:1rem; right: 1rem;
@@ -133,12 +144,15 @@ section{
     font-size: 1.5rem;
     color:var(--main-color);
 }
+
 .job{
     color: rgb(49, 45, 45);
-    
+    text-align: left;
+    margin-inline-end: 5px;
 }
 .header{
     background-color: rgb(172, 169, 164);
+
 }
 
 .home{
@@ -146,7 +160,7 @@ section{
     display: flex;
     align-items: center;
     background:url(https://t4.ftcdn.net/jpg/03/17/30/13/240_F_317301353_rY0Z8piZ1uhjQoYIVvgFYq4T1eFNyeMg.jpg) no-repeat;
-    background-size: cover;
+    background-size:contain;
     background-position: center;
 }
 
@@ -155,10 +169,13 @@ section{
 }
 
 .home .content h3{
-    font-size: 6rem;
+    font-size: 5rem;
     text-transform: uppercase;
     color:#fff;
+    margin-top:50px;
+    margin-left:30px;
 }
+
 
 .home .content p{
     font-size: 2rem;
@@ -486,7 +503,7 @@ section{
     justify-content: center;
     flex-wrap: wrap;
     color:white;
-    gap:1rem;
+    gap:1.5rem;
 }
 .momo a{
     padding:.5rem 1rem;
@@ -529,15 +546,26 @@ section{
 
 
 
+#active{
+    display:none;
+}
+.fas{
+display:none;
+}
+
+.wrapper{
+    display:none;
+}
 
 
 
 
-
-
-
-
-
+h5{
+    margin-left:30px;
+    margin-top:10px;
+    color:white;
+    display:none;
+}
 
 /* media queries  */
 @media (max-width:991px){
@@ -557,11 +585,11 @@ section{
 }
 
 @media (max-width:768px){
-
-    #menu-btn{
-        display: inline-block;
-    }
-
+.job{
+    text-align: left;
+    margin-inline-end: 180px;
+}
+    
     .header .navbar{
         position: absolute;
         top:100%; right: -100%;
@@ -591,6 +619,7 @@ section{
         background-position: left;
         justify-content: center;
         text-align: center;
+        
     }
 
     .home .content h3{
@@ -601,6 +630,122 @@ section{
         font-size: 1.5rem;
     }
 
+    .wrapper{
+        position:fixed;
+        display:flex;
+       bottom:9.8px;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(-135deg, #cb9ec8, #4158d0);
+        /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+        /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+        clip-path: circle(25px at calc(100% - 45px) 45px);
+        transition: all 0.3s ease-in-out;
+      }
+      #active:checked ~ .wrapper{
+        clip-path: circle(75%);
+      }
+      .menu-btn{
+        position: inherit;
+        z-index: 2;
+        right: 20px;
+        /* left: 20px; */
+        top: 10px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        border-color: black;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        background: linear-gradient(-135deg, #c46e8b, #ebaf81);
+        /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+        transition: all 0.3s ease-in-out;
+      }
+      #active:checked ~ .menu-btn{
+        background: #fff;
+        color: #97875a;
+      }
+      #active:checked ~ .menu-btn i:before{
+        content: "\f00d";
+      }
+      .wrapper ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+      }
+      .wrapper ul li{
+        margin: 15px 0;
+      }
+      .wrapper ul li a{
+        color: none;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        
+        color: #fff;
+        position: relative;
+        line-height: 40px;
+        padding-right:2px;
+        padding-left:2px;
+        transition: all 0.3s ease;
+      }
+      .wrapper ul li a:after{
+        position: absolute;
+        content: "";
+        background: #fff;
+        width: 100%;
+        height: 40px;
+        left: 0;
+        border-radius: 40px;
+        transform: scaleY(0);
+        z-index: -1;
+        transition: transform 0.3s ease;
+      }
+      .wrapper ul li a:hover:after{
+        transform: scaleY(1);
+      }
+      .wrapper ul li a:hover{
+        color: #414452;
+      }
+      input[type="checkbox"]{
+        display: none;
+      }
+      .fas{
+        display:inline-block;
+      }
+      .momo{
+        display:none;
+      }
+      .example{
+        display:none;
+      }
+      .content h3{
+        margin-top:40px;
+        
+      }
+      .btns{
+        margin-top:0px;
+        margin-bottom:10px;
+margin-right:20px;
+      }
+      .home{
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+        background:url(https://t4.ftcdn.net/jpg/03/17/30/13/240_F_317301353_rY0Z8piZ1uhjQoYIVvgFYq4T1eFNyeMg.jpg) no-repeat;
+        background-size:cover;
+        background-position: center;
+    }
+    h5{
+        display:inline;
+    }
 }
 
 @media (max-width:450px){
@@ -613,3 +758,33 @@ section{
 .bot{
     color:white;
 }
+.example {
+    background-color: #333;
+    overflow: hidden;
+    position:fixed;
+    top:70px;
+    width:85.2%;
+    margin-left:6px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .example a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .example a:hover {
+    background-color: #496158;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .example a.active {
+    background-color: #496158;
+    color: white;
+  }
