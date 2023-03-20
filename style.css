@@ -150,9 +150,12 @@ section{
 }
 
 .job{
-    color: rgb(49, 45, 45);
+    color: rgb(19, 18, 18);
     text-align: left;
     margin-inline-end: 5px;
+    font-weight:bold;
+    font-size:40px;
+    margin-top:4px;
 }
 
 .header{
@@ -553,7 +556,7 @@ h5{
 
     .header{
         padding:0.5rem 0rem;
-        padding-right:4px;
+        padding-right:8px;
     }
 
     section{
@@ -562,10 +565,13 @@ h5{
 
 }
 
-@media (max-width:768px){
+@media (max-width:720px){
 .job{
-    text-align: left;
-    margin-inline-end: 120px;
+    
+    margin-inline-end: 180px;
+    font-size:25px;
+    padding-right:40px;
+    margin-right:30px;
 }
     
     .header .navbar{
