@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root{
-    --main-color:#daaa6e;
+    --main-color:#c57276;
     --black:black;
-    --bg:#989798;
-    --border:.1rem solid rgba(137, 28, 28, 0.3);
+    --bg:linear-gradient(to right, #9e5770 15%, #0d1137 100%);
+    --border:.1rem solid rgba(242, 183, 20, 0.3);
 }
 
 *{
@@ -17,9 +17,10 @@
     transition: .2s linear;
 }
 .ex{
-    height: 40px;
-    width:40px;
-    margin-right:20px;
+    height:130px;
+    width:130px;
+    margin-top:8px;
+  
 }
 
 
@@ -94,20 +95,23 @@ section{
 }
 
 .header{
-    background: var(--bg);
+    background:linear-gradient(to right, #9e5770 15%, #0d1137 100%);
     display: flex;
+    width:100%;
     align-items: center;
     justify-content: space-between;
-    padding:1.5rem 7%;
+    padding:1.5rem 4%;
+    
     border-bottom: var(--border);
     position: fixed;
-    top:0; left: 0; right: 0;
+    
+    
     z-index: 1000;
+    height:70px;
+    
 }
 
-.header .logo img{
-    height: 4rem;
-}
+
 
 .header .navbar a{
     margin:0 1rem;
@@ -150,88 +154,62 @@ section{
     text-align: left;
     margin-inline-end: 5px;
 }
+
 .header{
     background-color: rgb(172, 169, 164);
 
 }
 
 .home{
-    min-height: 60vh;
+   height:800px;
     display: flex;
     align-items: center;
-    background:url(https://t4.ftcdn.net/jpg/03/17/30/13/240_F_317301353_rY0Z8piZ1uhjQoYIVvgFYq4T1eFNyeMg.jpg) no-repeat;
-    background-size:contain;
+     background-size:contain;
     background-position: center;
 }
-
-.home .content{
-    max-width: 60rem;
+.exam{
+  margin-top:80px;
 }
 
 .home .content h3{
-    font-size: 5rem;
+    
     text-transform: uppercase;
     color:#fff;
-    margin-top:50px;
-    margin-left:30px;
-}
-
-
-.home .content p{
-    font-size: 2rem;
-    font-weight: lighter;
-    line-height: 1.8;
-    padding:1rem 0;
-    color:#eee;
-}
-
-.about .row{
-    display: flex;
-    align-items: center;
-    background:var(--black);
-    flex-wrap: wrap;
-}
-
-.about .row .image{
-    flex:1 1 45rem;
+ 
+    
 }
 .menu-btn{
     text-align:right;
 }
-.about .row .image img{
-    width: 100%;
-}
-.about .row .content{
-    flex:1 1 45rem;
-    padding:2rem;
-}
 
-.about .row .content h3{
-    font-size: 3rem;
-    color:#fff;
-}
-
-.about .row .content p{
-    font-size: 1.6rem;
-    color:#ccc;
-    padding:1rem 0;
-    line-height: 1.8;
-}
 
 .menu .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:1.5rem;
+    
 }
 
 .menu .box-container .box{
+   padding:15px;
+    text-align: center;
+    border:var(--border); 
+    border-radius:5px;  
+    height:300px;
+}
+@media screen and (max-width:720px){
+  .menu .box-container .box{
     padding:5rem;
     text-align: center;
-    border:var(--border);    
+    border:var(--border); 
+    border-radius:5px;  
+    height:250px; 
+}
 }
 
 .menu .box-container .box img{
     height: 10rem;
+    
 }
 .review .box-container .box img{
     height:10rem;
@@ -242,11 +220,10 @@ section{
     font-size: 2rem;
     padding:1rem 0;
 }
-
 .menu .box-container .box .price{
     color: rgb(159, 158, 158);
     font-size: 2.5rem;
-    padding:.5rem 0;
+    
 }
 
 .menu .box-container .box .price span{
@@ -575,7 +552,8 @@ h5{
     }
 
     .header{
-        padding:1.5rem 2rem;
+        padding:0.5rem 0rem;
+        padding-right:4px;
     }
 
     section{
@@ -587,7 +565,7 @@ h5{
 @media (max-width:768px){
 .job{
     text-align: left;
-    margin-inline-end: 180px;
+    margin-inline-end: 120px;
 }
     
     .header .navbar{
@@ -615,20 +593,7 @@ h5{
         right: 2rem;
     }
 
-    .home{
-        background-position: left;
-        justify-content: center;
-        text-align: center;
-        
-    }
-
-    .home .content h3{
-        font-size: 4.5rem;
-    }
-
-    .home .content p{
-        font-size: 1.5rem;
-    }
+    
 
     .wrapper{
         position:fixed;
@@ -735,14 +700,7 @@ h5{
         margin-bottom:10px;
 margin-right:20px;
       }
-      .home{
-        min-height: 50vh;
-        display: flex;
-        align-items: center;
-        background:url(https://t4.ftcdn.net/jpg/03/17/30/13/240_F_317301353_rY0Z8piZ1uhjQoYIVvgFYq4T1eFNyeMg.jpg) no-repeat;
-        background-size:cover;
-        background-position: center;
-    }
+      
     h5{
         display:inline;
     }
@@ -763,8 +721,9 @@ margin-right:20px;
     overflow: hidden;
     position:fixed;
     top:70px;
-    width:85.2%;
-    margin-left:6px;
+    margin-left:43px;
+    width:86.2%;
+    
   }
   
   /* Style the links inside the navigation bar */
@@ -787,4 +746,109 @@ margin-right:20px;
   .example a.active {
     background-color: #496158;
     color: white;
+  }
+  .main{
+    height:100vh;
+    width:100%;  
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  .main h1{
+    text-align:center;
+    text-transform: uppercase;
+    color: #F1FAEE; 
+    font-size: 4rem;
+    font-family: 'Arvo', serif;
+  }
+  
+  .roller{
+    height: 4.125rem;
+    line-height: 4rem;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #1D3557;
+  }
+  
+  
+  #spare-time{
+    font-size: 1rem;
+    font-style: italic;
+    letter-spacing: 1rem;
+    margin-top: 0;
+    color: #A8DADC;
+    
+  }
+  
+  .roller #rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;  
+  }
+  
+  @keyframes slide {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -4rem;    
+    }
+    50%{
+      top: -8rem;
+    }
+    72.5%{
+      top: -12.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px){
+    .main h1{
+    text-align:center;
+    text-transform: uppercase;
+    color: #F1FAEE; 
+    font-size: 2rem;
+  }
+  .home{
+    height:350px;
+  }
+  .exam{
+height:200px;
+width:200px;
+margin-right:10px;
+margin-top:20px;
+  }
+    .roller{
+    height: 2.6rem; 
+    line-height: 2.125rem;  
+    }
+    
+    #spare-time {
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+    }
+    
+    .roller #rolltext {  
+    animation: slide-mob 5s infinite;  
+  }
+    
+    @keyframes slide-mob {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -2.125rem;    
+    }
+    50%{
+      top: -4.25rem;
+    }
+    72.5%{
+      top: -6.375rem;
+    }
+  }
   }
