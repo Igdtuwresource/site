@@ -38,7 +38,9 @@
 <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
 <div class="wrapper">
    <ul>
+      <li><a href="https://youtube.com/@TechWithUpasana?si=ol6oY6NJPVdWB-hO">YouTube</a></li>
       <li><a href="https://igdtuwresource.github.io/about/">About</a></li>
+
      <li><a href="https://igdtuwresource.github.io/syllabus/">Syllabus</a></li>
        <li><a href="https://www.instagram.com/igdtuw_resource/">Instagram</a></li>
       
@@ -52,6 +54,8 @@
 </div>
 <div class="example">
     <a href="#home" class="active">Home</a>
+   <a href="https://youtube.com/@TechWithUpasana?si=ol6oY6NJPVdWB-hO">YouTube</a>
+
    <a href="https://igdtuwresource.github.io/syllabus/">Syllabus</a>
     <a href="https://www.instagram.com/igdtuw_resource/">Instagram</a>
     <a href="https://igdtuwresource.github.io/opportunities/">Opportunities</a>
@@ -69,20 +73,19 @@
 
 <section class="home" id="home">
 
- 
-
+    
   <div class="main">
-    <h1>LEARN AND GROW<div class="roller">
-      <span id="rolltext">EXCEL IN YOUR ACADEMICS<br/>
-      WITH ALL STUDY STUFF<br/>
-      Curiosity<br/>
-      <span id="spare-time">too much spare time?</span><br/>
-      </div>
+    <h1>TechWithUpasana<div class="roller">
+      <span id="rolltext">Where Diligence lead to<br/>
+      stellar placements<br/>
+      <span id="spare-time">Subscribe & Share</span><br/>
+      </div><br><br>
+      <a href="https://youtube.com/@TechWithUpasana?si=ol6oY6NJPVdWB-hO" class="btnss"><b>SUBSCRIBE</b></a>
       </h1>
       
     </div>
-    <img src="exam.svg" class="exam">
-  
+    <img src="t.gif" class="exam">
+    
 </section>
 
 <!-- home section ends -->
@@ -321,6 +324,20 @@ window.onscroll = () =>{
 });
 document.querySelector("#close").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
+});
+</script>
+<script>
+    document.querySelector(".close").addEventListener("click" , function(){
+    document.querySelector(".container").style.display = "none";
+});
+
+window.addEventListener("load" , function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".container").style.display = "block";
+        },
+        2000
+    )
 });
 </script>
 </body>

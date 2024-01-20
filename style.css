@@ -86,6 +86,20 @@ section{
     border-radius: 5px;
     margin-left:30px;
 }
+.btnss{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:white;
+    background: rgb(234, 5, 5);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btnss:hover{
+    letter-spacing: .2rem;
+    color:white;
+}
 .btns:hover{
     letter-spacing: .2rem;
     color:black;
@@ -150,7 +164,7 @@ section{
 }
 
 .job{
-    color: rgb(19, 18, 18);
+    color: rgb(242, 235, 235);
     text-align: left;
     margin-inline-end: 5px;
     font-weight:bold;
@@ -171,7 +185,7 @@ section{
     background-position: center;
 }
 .exam{
-  margin-top:80px;
+  margin-top:0px;
 }
 
 .home .content h3{
@@ -790,8 +804,8 @@ margin-right:20px;
   }
   .main h1{
     text-align:center;
-    text-transform: uppercase;
-    color: #F1FAEE; 
+   
+    color: #f0e807; 
     font-size: 4rem;
     font-family: 'Arvo', serif;
   }
@@ -806,7 +820,7 @@ margin-right:20px;
     justify-content: center;
     align-items: center;
     
-    color: #1D3557;
+    color: #f6f3f3;
   }
   
   
@@ -843,18 +857,18 @@ margin-right:20px;
   @media screen and (max-width: 600px){
     .main h1{
     text-align:center;
-    text-transform: uppercase;
-    color: #F1FAEE; 
+    margin-right:30px;
+    color: #f3e708; 
     font-size: 2rem;
   }
   .home{
     height:350px;
   }
   .exam{
-height:200px;
-width:200px;
-margin-right:10px;
-margin-top:20px;
+height:100px;
+width:100px;
+margin-right:20px;
+
   }
     .roller{
     height: 2.6rem; 
@@ -890,3 +904,10 @@ margin-top:20px;
     height:110px;
     
   }
+
+  #spare-time {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    
+  }
+  
