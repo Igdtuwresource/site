@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root{
-    --main-color:#c57276;
+    --main-color:#f2eb1c;
     --black:black;
     --bg:linear-gradient(to right, #9e5770 15%, #0d1137 100%);
-    --border:.1rem solid rgba(242, 183, 20, 0.3);
+    --border:.1rem solid rgba(246, 246, 7, 0.3);
 }
 
 *{
@@ -70,10 +70,11 @@ section{
     display: inline-block;
     padding:.9rem 3rem;
     font-size: 1.7rem;
-    color:rgb(45, 43, 43);
-    background: var(--main-color);
+    color:rgb(19, 19, 19);
+    background: rgb(240, 235, 235);
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
+    border-color:#f2eb1c;
 }
 .btns{
     margin-top: 1rem;
@@ -265,12 +266,12 @@ section{
     border-radius:20px;
 }
 .menu .box-container .box h3{
-    color:black;
+    color:rgb(241, 241, 4);
     font-size: 2rem;
     padding:1rem 0;
 }
 .menu .box-container .box .price{
-    color: rgb(159, 158, 158);
+    color: rgb(242, 240, 240);
     font-size: 2.5rem;
     
 }
@@ -363,7 +364,7 @@ section{
 .review .box-container .box p{
     font-size: 1.5rem;
     line-height: 1.8;
-    color:black;
+    color:rgb(245, 238, 238);
     padding:2rem 0;
     text-decoration:none;
 }
@@ -492,7 +493,7 @@ section{
 }
 
 .footer{
-    background:black;
+    background:rgb(19, 19, 19);
     text-align: center;
 }
 
@@ -512,7 +513,7 @@ section{
 }
 
 .footer .share a:hover{
-    background-color: var(--main-color);
+    background-color: grey;
 }
 
 .footer .links{
